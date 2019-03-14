@@ -1,5 +1,13 @@
 <?php
+/*
+	check email - /[\w\d]+@[\w\d]+/
+	string contains a phone number - /\+998-\d{2}-\d{7}/
+	removes the whitespaces from a string - /\s/
+	remove nonnumeric characters except comma and dot - /[^\d\,\.]/  //finds non-numerical ele-ts and replace with space,or anything entered for $replacetext
+	remove new lines - /\n/
+	remove text in square brackets - /\[.*\]/ 
 
+*/ 
 	$pattern="";
 	$text="";
 	$replaceText="";
@@ -12,8 +20,8 @@ if ($_SERVER["REQUEST_METHOD"]=="POST") {
 	$text=$_POST["text"];
 	$replaceText=$_POST["replaceText"];
 
-	$replacedText=preg_replace($pattern, $replaceText, $text);
-
+	$replacedText=preg_replace($pattern, $replaceText, $text); 	// preg_replace() searches for $pattern(regularExpression) if it finds
+															   	// string matching $replaceText is replaced with string inside $text
 	if(preg_match($pattern, $text)) {
 						$match="Match!";
 					} else {
@@ -21,6 +29,7 @@ if ($_SERVER["REQUEST_METHOD"]=="POST") {
 					}
 }
 
+//         /^\+([0-9]{3})-([0-9]{2})-([0-9]{3})-([0-9]{4})$/    to check phone number
 ?>
 
 

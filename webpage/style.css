@@ -19,7 +19,16 @@ h1, h2 {
     font-family: sans-serif;
     text-align: center;
 }
-
+select{
+    display: block;
+    padding: 5px;
+    font-size: 14px;
+}
+input{
+    display: block;
+    padding: 5px;
+    font-size: 14px;
+}
 input[type="submit"] {
     font-size: 2em;
     width: 100%;

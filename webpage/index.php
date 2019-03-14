@@ -15,17 +15,21 @@
 		<hr />
 		
 		<h2>Please, fill below fields correctly</h2>
-		<dl>
-			<dt>Name</dt>
-			<dd>
-				???
-			</dd>
-			
-			<!-- Write other fiels similar to Name as specified in lab6.pdf -->
-		</dl>
-		
-		<div>
-			Register
-		</div>
+			<form action="checker.php" method="post">
+				<input type="text" placeholder="Name:" name="name" />
+				<input type="email" placeholder="Email:" name="email" />
+				<input type="text" placeholder="Username:" name="userName" />
+				<input type="password" placeholder="Password:" name="password" />
+				<input type="password" placeholder="Confirm password:" name="confirmPassword" />
+				<input type="text" placeholder="Data of birth:" name="date" />
+				<select name="gender">
+					<option>Mail</option>
+					<option>Femail</option>
+				</select>
+				<input type="text" placeholder="Phone number:" name="phone" />
+				<input type="text" placeholder="Web url:" name="url" />
+				<input type="text" placeholder="Overall GPA:" name="gpa" />
+				<input type="submit" />
+			</form>
 	</body>
 </html>
